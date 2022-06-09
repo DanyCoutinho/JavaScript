@@ -22,14 +22,22 @@
     <p>Exercício 3</p>
 
     <script>
-        var n1 = window.prompt('Digite um número')
-        var n2 = window.prompt('Digite outro número')
+        /*
+        var n1 = window.prompt('Digite um número: ') //String
+        var n2 = window.prompt('Digite outro número: ') //String
+        */
+        //Convertendo as variáveis de string para number
+        var n1 = Number.parseFloat(window.prompt('Digite um número: '))
+        var n2 = Number.parseFloat(window.prompt('Digite outro número: '))
         var s = n1 + n2
-        window.alert('A soma dos dois números é, ' + s)
+        // window.alert('A soma dos dois números é, ' + String(s)) // Conertendo o valor para String com a forma antiga de apresnetar dados
+        window.alert(`A soma entre o número ${n1} e o número ${n2} é igual a ${s}`) // Forma mais recente de apresentar dados
+        // O valor dá a junção dos número e não a soma porque o "+" junta os valores em vez de fazer a soma, explicação a seguir:
         /*
         (number + number) para adição
         (string + string) para concatenação
         */
+
     </script>
 </body>
 </html>
