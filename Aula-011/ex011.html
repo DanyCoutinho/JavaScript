@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteção de Nacionalidade</title>
+</head>
+<body>
+    <h1>A sua nacionalidade</h1>
+    <p>Aqui iremos descobrir de qual nacionalidade você é.</p>
+    <p>Será Brasileiro ou estrangeiro?</p>
+
+    Em que país você nasceu? 
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="descobrir()">
+    <div id="resultado"></div>
+
+    <script>
+        function descobrir() {
+            var txtpais = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#resultado')
+            var pais = String(txtpais.value)
+
+            res.innerHTML = `<p>Você nasceu em ${pais}</p>`
+
+                if (pais == 'Brasil') {
+                    res.innerHTML += `Você é Brasileiro porque nasceu no ${pais}`
+                } else {
+                    res.innerHTML += `Você é estrangeiro porque nasceu em ${pais}`
+                }
+        }
+    </script>
+</body>
+</html>
