@@ -8,3 +8,13 @@ num.length
 console.log(`O nosso vetor tem ${num.length} elementos.`)
 num.sort()
 console.log(`O nosso vetor organizado ${num}`)
+
+console.log('Mostrando todos elementos do vetor:')
+for (let pos = 0 ; pos < num.length ; pos++) {
+    console.log(num[pos])
+}
+
+console.log('Simplificando o código:')
+for (let pos in num) {
+    console.log(num[pos])
+}
